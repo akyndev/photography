@@ -48,7 +48,7 @@ export default function MobileNav({
 							{nav.map((n, i) => (
 								<li
 									key={i}
-onClick={()=> setNavIsOpen(false)}
+
 									className={cn(
 										"py-1 capitalize tracking-wider opacity-0 scale-0",
 										{
@@ -56,7 +56,8 @@ onClick={()=> setNavIsOpen(false)}
 											"first:border-b firsrt:border-black": active === null,
 										},
 									)}>
-									<Link href={!(i === 0) ? `/${n}` : "/"}>{n}</Link>
+									<Link
+onClick={()=> setNavIsOpen(false)} href={!(i === 0) ? `/${n}` : "/"}>{n}</Link>
 								</li>
 							))}
 						</ul>
