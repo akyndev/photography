@@ -76,8 +76,9 @@
 }
 hmtl {
 height: --webkit-fill-available;
+position: fixed;
+height: 100%;
 }
 body {
 height: --webkit-fill-available;
-height: 100vh;
 }
