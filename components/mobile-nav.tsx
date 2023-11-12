@@ -48,6 +48,7 @@ export default function MobileNav({
 							{nav.map((n, i) => (
 								<li
 									key={i}
+onClick={()=> setNavIsOpen(false)}
 									className={cn(
 										"py-1 capitalize tracking-wider opacity-0 scale-0",
 										{
