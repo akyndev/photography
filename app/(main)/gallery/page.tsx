@@ -16,8 +16,8 @@ const gallery = [
 const Page = () => {
 	return (
 		<main className="">
-			<div className="h-16 md:h-20 w-full bg-black/50 mb-10"></div>
-			<section className="container lg:px-8">
+			<div className="h-20 md:h-20 w-full bg-black/50"></div>
+			<section className="container lg:px- my-20">
 				<Gallery gallery={gallery} />
 			</section>
 		</main>

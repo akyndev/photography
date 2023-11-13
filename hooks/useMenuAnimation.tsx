@@ -12,7 +12,7 @@ const useMenuAnimation = (isOpen: boolean) => {
 		if (scope.current) {
 			animate(
 				scope.current,
-				isOpen ? { height: "100vh", opacity: 1 } : { height: 0, opacity: 0 },
+				isOpen ? { height: "100%", opacity: 1 } : { height: 0, opacity: 0 },
 				{
 					type: "spring",
 					duration: .3,

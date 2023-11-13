@@ -3,7 +3,6 @@ import BeforeAfter from "@/components/before-after"
 import Gallery from "@/components/gallery"
 import { Button } from "@/components/ui/button"
 import { Pause, Play } from "lucide-react"
-import Image from "next/image"
 import Link from "next/link"
 import React, { useRef, useState } from "react"
 
@@ -36,7 +35,7 @@ export default function Home() {
 					className="object-cover  w-full h-full ">
 					<source src="https://openaicomproductionae4b.blob.core.windows.net/production-twill-01/121dd5e0-eaea-424d-bdf2-db02ca1f5e55/gpt-4-92586ac_1080p60.mp4" />
 				</video>
-				<div className="absolute bottom-4 z-40 right-8 left-0">
+				<div className="absolute bottom-8 z-40 right-8 left-0">
 					<div className="container flex items-end justify-end">
 						<Button
 							className="rounded-sm px-4 transition-all duration-300 hover:bg-white hover:text-black font-semibold tracking-widest"
@@ -66,7 +65,7 @@ export default function Home() {
 							<h1 className="text-4xl  xl:text-5xl mb-6">
 								Capture the Moments <br /> That Matter.
 							</h1>
-							<p className="font-light text-sm xl:text-base">
+							<p className="font-light text-md xl:text-base">
 								Welcome classic&apos;s Photography, where every frame tells a
 								story. Embrace the beauty of life&apos;s fleeting moments
 								through the lens of our passion. From breathtaking landscapes to

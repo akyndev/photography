@@ -54,7 +54,7 @@ const Header = () => {
 									alt="logo"
 									width={400}
 									height={400}
-									className="w-16 md:w-20 h-auto"
+									className="w-24 md:w-20 h-auto"
 								/>
 							</Link>
 							<div>
@@ -71,7 +71,7 @@ const Header = () => {
 									))}
 								</ul>
 								<div className="flex lg:hidden">
-									<Menu onClick={() => setNavIsOpen(true)} />
+									<Menu size={32} onClick={() => setNavIsOpen(true)} />
 								</div>
 								<MobileNav
 									isOpen={navIsOpen}
@@ -81,14 +81,14 @@ const Header = () => {
 							</div>
 
 							<div className="lg:flex hidden">
-								<Link href={"/auth/signin"}>
+								<Link href={"https://wp.akyn.dev"} target="_blank">
 									<Button
 										className={cn(
 											"rounded-full border border-blue-700 bg-blue-700 w-32",
 											{ "": navScrolled },
 										)}>
 										Login
-										<ArrowUpRight className="ml-2 h-4 w-4" />
+										<ArrowUpRight className="ml-2" size={20} />
 									</Button>
 								</Link>
 							</div>
