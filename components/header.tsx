@@ -39,7 +39,7 @@ const Header = () => {
 	})
 
 	return (
-		<header className="fixed left-0 right-0 top-0 z-[100]">
+		<header className=" left-0 right-0 top-0 z-[100]">
 			<motion.div
 				className={cn("text-white transition-all duration-300 py-4", {
 					"shadow bg-white/50  backdrop-blur-xl text-black": navScrolled,

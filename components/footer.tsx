@@ -34,13 +34,13 @@ const footerNav = [
 
 const Footer = () => {
 	return (
-		<footer className="bg-gray-100">
+		<footer className="bg-gray-100 pt-10 mt-40">
 			<div className="container lg:px-8">
-				<section className="grid grid-flow-col auto-cols-auto  gap-8 lg:gap-16 py-10 ">
-					<div className="text-lg lg:text-base col-span-full md:col-span-2 lg:col-span-1">
+				<section className="grid lg:grid-flow-col auto-cols-auto gap-8  lg:gap-10 py-10 ">
+					<div className="text-lg lg:text-base col-span-full lg:col-span-1">
 						<h1 className="text-xl font-semibold mb-6">Get in touch</h1>
 						<p className="mb-3 text-muted-foreground">
-							8014 Edith Blvd NE, Albuquerque, New York, <br /> United States
+							8014 Edith Blvd NE, Albuquerque, <br />New York,  United States
 						</p>
 						<p className="mb-3  text-muted-foreground">
 							<Link href={"tel:09022236997"}>09022246997</Link>
@@ -53,7 +53,7 @@ const Footer = () => {
 					</div>
 					{footerNav.map((nav, i) => (
 						<React.Fragment key={i}>
-							<div className="col-span-full md:col-span-2 lg:col-span-1">
+							<div className="col-span-full lg:col-span-1">
 								<ul>
 									{nav.map((l, j) => (
 										<li
@@ -66,8 +66,8 @@ const Footer = () => {
 							</div>
 						</React.Fragment>
 					))}
-					<div className="col-span-full md:col-span-2 lg:col-span-1">
-						<h1 className="text-xl font-semibold   mb-6">Our Newsletter</h1>
+					<div className="col-span-full lg:col-span-1">
+						<h1 className="text-xl font-semibold mb-6">Our Newsletter</h1>
 						<p className="text-lg lg:text-base mb-3  text-muted-foreground w-full sm:w-96">
 							Subscribe to our newsletter to get our news & discounts delivered
 							to you.

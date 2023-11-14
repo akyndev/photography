@@ -2,9 +2,12 @@
 import BeforeAfter from "@/components/before-after"
 import Gallery from "@/components/gallery"
 import { Button } from "@/components/ui/button"
-import { Pause, Play } from "lucide-react"
+import { Camera, Check, CheckCircle, Pause, Play, Slash } from "lucide-react"
 import Link from "next/link"
 import React, { useRef, useState } from "react"
+import { rubik } from "../font"
+import { cn } from "@/lib/utils"
+import { Separator } from "@/components/ui/separator"
 
 const gallery = [
 	"https://images.unsplash.com/photo-1624634564754-e45be6d06159?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -23,7 +26,7 @@ export default function Home() {
 	const [isPlaying, setIsPlaying] = useState(videoRef.current?.paused)
 
 	return (
-		<main className="w-full relative">
+		<main className="w-full relative space-y-40">
 			<section className="relative h-screen max-h-[1000px] w-full">
 				<div className="absolute top-0 left-0 right-0 bottom-0 bg-black/60 z-20"></div>
 				<video
@@ -61,7 +64,7 @@ export default function Home() {
 				</div>
 				<div className="absolute text-white bottom-32 left-0 right-0 z-40">
 					<div className="container">
-						<div className="w-full lg:w-6/12 lg:ml-12">
+						<div className="w-full lg:w-6/12 lg:ml-1 -mr-12">
 							<h1 className="text-4xl  xl:text-5xl mb-6">
 								Capture the Moments <br /> That Matter.
 							</h1>
@@ -79,59 +82,378 @@ export default function Home() {
 				</div>
 			</section>
 			<section className="container lg:px-8 my-20">
-				<div className="flex flex-col lg:flex-row items-center space-y-8 lg:space-x-16">
+				<div className="flex flex-col lg:flex-row items-start space-y-16 lg:space-y-0 lg:space-x-16 lg:px-8 px-0">
 					<BeforeAfter
 						before="http://wedding-retouching.com/UserFiles/wedding-editing(3)(1).jpg"
 						after="http://wedding-retouching.com/UserFiles/wedding-editing(4)(1).jpg"
 						edited="http://wedding-retouching.com/UserFiles/wedding-editing(2)(1).png"
-						className="lg:w-7/12 w-full sm:w-10/12"
+						className="lg:w-9/12 w-full sm:w-10/12"
 					/>
 					<div className="w-full">
-						<p>
-							If you or your colleagues still think that placing an order for
-							wedding photo editing is a complicated task, we can prove
-							opposite! Due to comfortable usability of our website and friendly
-							customer support (find online help at the bottom chat window), you
-							will have no problems concerning your photo editing orders.
-							Everything you see on our website is done for customers` comfort.
-							So, just try to make your first order and realize how simple it
-							is.
-							<br />
-							s photo - Before - Example of wedding photography editing s photo
-							- After - Example of wedding photography editing
-							<br />
-							Firstly, choose what package of professional photo retouching
-							services you need. Please look at this wedding photo editing
-							example. That is a task of primary importance as the biggest part
-							of success depends exactly on it. You should be carefully
-							consulted by our photo retouchers who will advise you important
-							things about wedding photography edit. <br /> The next step is
-							registration. It is necessary for us to get some information about
-							would-be client who is interested in photo retouching services and
-							for you to track and review your order. <br /> Uploading wedding
-							photos is surely the next important step. You should be aware of
-							some features and limitations. For instance, you will face
-							difficulties if you plan to upload shots for image retouching that
-							are bigger than 50 mb. In this case the most rational decision
-							will be to ask a photo retouchers or a manager in the online
-							support chat. Our specialists are always open for communication.{" "}
-							<br /> And finally, wait for wedding photo editing results. As
-							soon as your photos are ready you can download them and view work
-							of our photography retouchers team. If you have remarks, feel free
-							to discuss them with our managers and we will fix all of the
-							mistakes.
-						</p>
+						<h1 className="text-2xl font-bold mb-8">Lorem ipsum</h1>
+						<ul className="space-y-10 lg:w-11/12">
+							<li className="flex space-x-4">
+								<CheckCircle color="green" className="h-8 w-8" />
+								<div className="flex-1">
+									<h2 className="font-semibold text-lg  mb-3">
+										Seamless Quality and Convenience
+									</h2>
+									<p>
+										Experience the convenience of professional wedding photo
+										editing. From initial examples to the final touches,
+										we&apos;re dedicated to exceeding your expectations with our
+										streamlined service.
+									</p>
+								</div>
+							</li>
+							<li className="flex space-x-4">
+								<CheckCircle color="green" className="h-8 w-8" />
+								<div className="flex-1">
+									<h2 className="font-semibold text-lg  mb-3">
+										Effortless Wedding Photo Enhancement
+									</h2>
+									<p>
+										Transforming your wedding photos is simpler than ever with
+										our user-friendly process. Choose your retouching package,
+										consult with our experts, and witness the magic unfold.
+									</p>
+								</div>
+							</li>
+							<li className="flex space-x-4">
+								<CheckCircle color="green" className="h-8 w-8" />
+								<div className="flex-1">
+									<h2 className="font-semibold text-lg  mb-3">
+										Effortless Wedding Photo Enhancement
+									</h2>
+									<p>
+										Transforming your wedding photos is simpler than ever with
+										our user-friendly process. Choose your retouching package,
+										consult with our experts, and witness the magic unfold.
+									</p>
+								</div>
+							</li>
+							<li className="flex space-x-4">
+								<CheckCircle color="green" className="h-8 w-8" />
+								<div className="flex-1">
+									<h2 className="font-semibold text-lg  mb-3">
+										Easy Steps to Stunning Edits
+									</h2>
+									<p>
+										Register, upload, and await your beautifully enhanced
+										wedding photos. Our support team is on standby for any
+										assistance you may need.
+									</p>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</section>
-			<section className="container lg:px-8">
-					<Gallery gallery={gallery} />
-				<div className="w-full flex my-16">
+			<section>
+				<div className="container lg:px-8">
+					<ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+						<li className="space-y-4 ">
+							<div className="p-6 bg-blue-600 rounded-md w-max">
+								<Camera color="white" />
+							</div>
+							<Separator />
+							<div>
+								<h3 className="font-semibold text-xl">Take a shoot</h3>
+								<p className="lg:text-sm text-base my-2">
+									Get snap by anyone with your mobile phone or by a photographer
+								</p>
+							</div>
+						</li>
+						<li className="space-y-4 ">
+							<div className="p-6 bg-blue-600 rounded-md w-max">
+								<Camera color="white" />
+							</div>
+							<Separator />
+							<div>
+								<h3 className="font-semibold text-xl">Take a shoot</h3>
+								<p className="lg:text-sm text-base my-2">
+									Get snap by anyone with your mobile phone or by a photographer
+								</p>
+							</div>
+						</li>
+						<li className="space-y-4 ">
+							<div className="p-6 bg-blue-600 rounded-md w-max">
+								<Camera color="white" />
+							</div>
+							<Separator />
+							<div>
+								<h3 className="font-semibold text-xl">Take a shoot</h3>
+								<p className="lg:text-sm text-base my-2">
+									Get snap by anyone with your mobile phone or by a photographer
+								</p>
+							</div>
+						</li>
+						<li className="space-y-4 ">
+							<div className="p-6 bg-blue-600 rounded-md w-max">
+								<Camera color="white" />
+							</div>
+							<Separator />
+							<div>
+								<h3 className="font-semibold text-xl">Take a shoot</h3>
+								<p className="lg:text-sm text-base my-2">
+									Get snap by anyone with your mobile phone or by a photographer
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section className="container lg:px-8 my-20">
+				<div className="flex flex-col lg:flex-row-reverse items-start space-y-16 lg:space-y-0 lg:space-x-16 lg:px-8 px-0">
+					<BeforeAfter
+						before="http://wedding-retouching.com/UserFiles/wedding-editing(3)(1).jpg"
+						after="http://wedding-retouching.com/UserFiles/wedding-editing(4)(1).jpg"
+						edited="http://wedding-retouching.com/UserFiles/wedding-editing(2)(1).png"
+						className="lg:w-9/12 w-full sm:w-10/12"
+					/>
+					<div className="w-full">
+						<h1 className="text-2xl font-bold mb-8">Lorem ipsum</h1>
+						<ul className="space-y-10 lg:w-11/12">
+							<li className="flex space-x-4">
+								<CheckCircle color="green" className="h-8 w-8" />
+								<div className="flex-1">
+									<h2 className="font-semibold text-lg  mb-3">
+										Seamless Quality and Convenience
+									</h2>
+									<p>
+										Experience the convenience of professional wedding photo
+										editing. From initial examples to the final touches,
+										we&apos;re dedicated to exceeding your expectations with our
+										streamlined service.
+									</p>
+								</div>
+							</li>
+							<li className="flex space-x-4">
+								<CheckCircle color="green" className="h-8 w-8" />
+								<div className="flex-1">
+									<h2 className="font-semibold text-lg  mb-3">
+										Effortless Wedding Photo Enhancement
+									</h2>
+									<p>
+										Transforming your wedding photos is simpler than ever with
+										our user-friendly process. Choose your retouching package,
+										consult with our experts, and witness the magic unfold.
+									</p>
+								</div>
+							</li>
+							<li className="flex space-x-4">
+								<CheckCircle color="green" className="h-8 w-8" />
+								<div className="flex-1">
+									<h2 className="font-semibold text-lg  mb-3">
+										Effortless Wedding Photo Enhancement
+									</h2>
+									<p>
+										Transforming your wedding photos is simpler than ever with
+										our user-friendly process. Choose your retouching package,
+										consult with our experts, and witness the magic unfold.
+									</p>
+								</div>
+							</li>
+							<li className="flex space-x-4">
+								<CheckCircle color="green" className="h-8 w-8" />
+								<div className="flex-1">
+									<h2 className="font-semibold text-lg  mb-3">
+										Easy Steps to Stunning Edits
+									</h2>
+									<p>
+										Register, upload, and await your beautifully enhanced
+										wedding photos. Our support team is on standby for any
+										assistance you may need.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section className="container lg:px-8 space-y-16">
+				<div>
+					<h1 className="text-4xl lg:text-5xl font-bold">
+						Some of our recent <br /> edited shoot
+					</h1>
+					<p className="my-6 max-w-[700px]">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+						excepturi magni magnam molestias repellat repellendus modi
+						temporibus fugiat ratione molestiae! Commodi in explicabo maiores,
+						alias sint quasi optio cum repellendus?
+					</p>
+				</div>
+				<Gallery gallery={gallery} />
+				<div className="w-full flex ">
 					<Link
 						className="justify-self-center mx-auto w-full sm:w-72"
 						href={"/gallery"}>
 						<Button className="w-full py-4 ">See More</Button>
 					</Link>
+				</div>
+			</section>
+			<section
+				className={cn("bg-blue-50 py-20 overflow-hidden", rubik.className)}>
+				<div className="container relative  lg:px-8">
+					<div className="grid grid-cols-1 lg:text-sm md:grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-gray-300 rounded-3xl overflow-hidden border border-gray-300">
+						<div className="p-6 space-y-8">
+							<h4 className="font-semibold">Free</h4>
+							<p className="">
+								Lorem ipsum dolor, amet consectetur adipisicing elit. Quaerat
+								fuga architecto nam magnam quia neque natus perspiciatis
+							</p>
+							<h1 className="text-2xl lg:text-3xl font-bold flex items-center">
+								$20
+								<Slash
+									className="ml-1 -mr-1 -rotate-12 text-muted-foreground"
+									strokeWidth={4}
+								/>
+								<span className="text-muted-foreground">pic</span>
+							</h1>
+							<Button className="w-full">Order now</Button>
+							<ul className=" font-bold space-y-3">
+								<li className="flex space-x-4">
+									<Check color="blue" size={20} />
+									<h6>Background removal</h6>
+								</li>
+								<li className="flex space-x-4">
+									<Check color="blue" size={20} />
+									<h6>Background removal</h6>
+								</li>
+								<li className="flex space-x-4">
+									<Check color="blue" size={20} />
+									<h6>Background removal</h6>
+								</li>
+								<li className="flex space-x-4">
+									<Check color="gray" size={20} />
+									<h6>Background removal</h6>
+								</li>
+								<li className="flex space-x-4">
+									<Check color="gray" size={20} />
+									<h6>Background removal</h6>
+								</li>
+							</ul>
+						</div>
+						<div className="p-6 space-y-8">
+							<h4 className="font-semibold">Free</h4>
+							<p className="">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Quaerat fuga architecto nam magnam quia neque natus perspiciatis
+							</p>
+							<h1 className="text-2xl lg:text-3xl font-bold flex items-center">
+								$20
+								<Slash
+									className="ml-1 -mr-1 -rotate-12 text-muted-foreground"
+									strokeWidth={4}
+								/>
+								<span className="text-muted-foreground">pic</span>
+							</h1>
+							<Button className="w-full">Order now</Button>
+							<ul className=" font-bold space-y-3">
+								<li className="flex space-x-4">
+									<Check color="blue" size={20} />
+									<h6>Background removal</h6>
+								</li>
+								<li className="flex space-x-4">
+									<Check color="blue" size={20} />
+									<h6>Background removal</h6>
+								</li>
+								<li className="flex space-x-4">
+									<Check color="blue" size={20} />
+									<h6>Background removal</h6>
+								</li>
+								<li className="flex space-x-4">
+									<Check color="gray" size={20} />
+									<h6>Background removal</h6>
+								</li>
+								<li className="flex space-x-4">
+									<Check color="gray" size={20} />
+									<h6>Background removal</h6>
+								</li>
+							</ul>
+						</div>
+						<div className="p-6 space-y-8">
+							<h4 className="font-semibold">Free</h4>
+							<p className="">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Quaerat fuga architecto nam magnam quia neque natus perspiciatis
+							</p>
+							<h1 className="text-2xl lg:text-3xl font-bold flex items-center">
+								$20
+								<Slash
+									className="ml-1 -mr-1 -rotate-12 text-muted-foreground"
+									strokeWidth={4}
+								/>
+								<span className="text-muted-foreground">pic</span>
+							</h1>
+							<Button className="w-full">Order now</Button>
+							<ul className=" font-bold space-y-3">
+								<li className="flex space-x-4">
+									<Check color="blue" size={20} />
+									<h6>Background removal</h6>
+								</li>
+								<li className="flex space-x-4">
+									<Check color="blue" size={20} />
+									<h6>Background removal</h6>
+								</li>
+								<li className="flex space-x-4">
+									<Check color="blue" size={20} />
+									<h6>Background removal</h6>
+								</li>
+								<li className="flex space-x-4">
+									<Check color="gray" size={20} />
+									<h6>Background removal</h6>
+								</li>
+								<li className="flex space-x-4">
+									<Check color="gray" size={20} />
+									<h6>Background removal</h6>
+								</li>
+							</ul>
+						</div>
+
+						<div className="p-6 space-y-8">
+							<h4 className="font-semibold">Free</h4>
+							<p className="">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Quaerat fuga architecto nam magnam quia neque natus perspiciatis
+							</p>
+							<h1 className="text-2xl lg:text-3xl font-bold flex items-center">
+								$20
+								<Slash
+									className="ml-1 -mr-1 -rotate-12 text-muted-foreground"
+									strokeWidth={4}
+								/>
+								<span className="text-muted-foreground">pic</span>
+							</h1>
+							<Button className="w-full">Order now</Button>
+							<ul className=" font-bold space-y-3">
+								<li className="flex space-x-4">
+									<Check color="blue" size={20} />
+									<h6>Background removal</h6>
+								</li>
+								<li className="flex space-x-4">
+									<Check color="blue" size={20} />
+									<h6>Background removal</h6>
+								</li>
+								<li className="flex space-x-4">
+									<Check color="blue" size={20} />
+									<h6>Background removal</h6>
+								</li>
+								<li className="flex space-x-4">
+									<Check color="gray" size={20} />
+									<h6>Background removal</h6>
+								</li>
+								<li className="flex space-x-4">
+									<Check color="gray" size={20} />
+									<h6>Background removal</h6>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div className="absolute bg-blue-400 blur-[72px] top-0 left-32 w-24 h-24" />
+					<div className="absolute bg-blue-400 blur-[72px] bottom-0 left-72 w-24 h-24" />
+					<div className="absolute bg-blue-400 blur-[72px] top-32 right-96 w-24 h-24" />
+					<div className="absolute bg-blue-400 blur-[72px] -bottom-32 right-32 w-24 h-24" />
 				</div>
 			</section>
 		</main>
